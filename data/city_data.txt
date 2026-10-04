@@ -1,0 +1,21 @@
+# AmbuNav sample virtual city layout
+# Format (reference only - not yet parsed at runtime, see README section 8):
+# EDGE <JunctionA> <JunctionB> <TravelTimeMinutes>
+# HOSPITAL <Name> <JunctionLocation> <BedCapacity>
+
+EDGE J1 J2 4
+EDGE J1 J3 7
+EDGE J2 J4 3
+EDGE J3 J4 2
+EDGE J3 J5 6
+EDGE J4 J6 5
+EDGE J5 J6 3
+EDGE J5 J7 4
+EDGE J6 J8 6
+EDGE J7 J8 2
+EDGE J7 J9 5
+EDGE J8 J10 3
+EDGE J9 J10 4
+
+HOSPITAL "CityCare Hospital" J8 50
+HOSPITAL "Metro General Hospital" J10 80
