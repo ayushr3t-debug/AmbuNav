@@ -43,7 +43,7 @@ AmbuNav/
 └── README.md
 ```
 
-## 4. Menu walkthrough (what to demo to your mentor)
+## 4. Menu walkthrough
 
 | # | Option | What it shows |
 |---|--------|----------------|
