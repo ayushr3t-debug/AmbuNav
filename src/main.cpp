@@ -98,6 +98,7 @@ int main() {
         cout << "7. Find shortest route between two junctions\n";
         cout << "8. Dispatch AMBULANCE to nearest hospital (priority + green corridor)\n";
         cout << "9. Show route/event log\n";
+        cout << "10. Show traffic report\n";
         cout << "0. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
@@ -247,6 +248,12 @@ int main() {
 
         } else if (choice == 9) {
             log.printLog();
+
+        else if (choice == 10) {
+    
+            cout << "\n===== TRAFFIC REPORT =====\n";
+            cout << "Traffic report feature added.\n";
+        }
 
         } else if (choice != 0) {
             cout << "Invalid choice, try again.\n";
