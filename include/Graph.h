@@ -6,6 +6,12 @@
 #include <utility>
 #include "HashTable.h"
 
+
+class Graph {
+public:
+    double calculateTravelTime(double distance, double speed);
+};
+
 // One road connecting two junctions
 struct Edge {
     int to;
