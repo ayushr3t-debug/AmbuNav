@@ -1,4 +1,5 @@
 #include "../include/Graph.h"
+#include "graph.h"
 #include <iostream>
 #include <queue>
 #include <limits>
@@ -18,6 +19,14 @@ int Graph::addNode(const std::string& name) {
     return idx;
 }
 
+double Graph::calculateTravelTime(double distance, double speed) {
+    if (distance < 0 || speed <= 0) {
+        return -1;
+    }
+
+    return (distance / speed) * 60;
+}
+
 void Graph::addEdge(const std::string& from, const std::string& to,
                      double weight, bool bidirectional) {
     int a = addNode(from);
@@ -27,6 +36,7 @@ void Graph::addEdge(const std::string& from, const std::string& to,
         adjList[b].push_back(Edge{a, weight, weight, false});
     }
 }
+
 
 int Graph::getIndex(const std::string& name) const {
     int idx;
