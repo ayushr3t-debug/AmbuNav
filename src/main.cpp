@@ -15,6 +15,7 @@
 
 using namespace std;
 
+
 // Builds a sample virtual city: 10 junctions, roads with travel time (minutes), 2 hospitals.
 void buildSampleCity(Graph& city, vector<Hospital>& hospitals) {
     city.addEdge("J1", "J2", 4);
@@ -78,6 +79,25 @@ int main() {
     Graph city;
     vector<Hospital> hospitals;
     buildSampleCity(city, hospitals);
+
+     Graph g;
+
+    double distance, speed;
+
+    cout << "Enter route distance (km): ";
+    cin >> distance;
+
+    cout << "Enter average speed (km/h): ";
+    cin >> speed;
+
+    double time = g.calculateTravelTime(distance, speed);
+
+    if (time < 0) {
+        cout << "Invalid distance or speed." << endl;
+    } else {
+        cout << "Estimated travel time: "
+             << time << " minutes" << endl;
+    }
 
     vector<unique_ptr<Vehicle>> vehicles;
     vehicles.push_back(make_unique<Ambulance>("AMB_101", "J1"));
