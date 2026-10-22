@@ -18,7 +18,7 @@ void TrafficSimulator::simulateRandomCongestion(Graph& g, RouteLog& log, int num
             std::cout << entry << "\n";
         }
     }
-}
+} 
 
 void TrafficSimulator::reportAccident(Graph& g, RouteLog& log,
                                        const std::string& from, const std::string& to) {
